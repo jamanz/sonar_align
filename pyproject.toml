@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sonar_bertalign"
+version = "0.1.0"
+authors = [
+    { name = "Your Name / AI Assistant", email = "user@example.com" },
+]
+description = "Adaptation of BERTAlign to use Meta's SONAR embeddings for parallel text alignment."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License", # Or your chosen license
+    "Operating System :: OS Independent",
+    "Intended Audience :: Science/Research",
+    "Topic :: Text Processing :: Linguistic",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "torch",
+    "numpy",
+    "fairseq2",
+    "sonar-space",
+    "nltk",
+    "spacy",
+    "sentence-transformers",
+    "tqdm",
+    "scikit-learn", # Added as cosine_similarity_matrix uses it
+]
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "isort",
+    "pytest",
+    "jupyterlab", # For notebooks
+]
+
+[project.urls]
+"Homepage" = "https://github.com/user/sonar_bertalign"  # Replace with actual URL
+"Bug Tracker" = "https://github.com/user/sonar_bertalign/issues" # Replace
+
+[project.scripts]
+# If you want to make align_texts.py runnable as a command after installation
+# align-texts = "sonar_bertalign.scripts.align_texts:main"
+
+[tool.setuptools]
+packages = ["sonar_bertalign"]
+package-dir = {"" = "src"}
+
+# You can also configure black and isort here if desired
+# [tool.black]
+# line-length = 88
+#
+# [tool.isort]
+# profile = "black" 

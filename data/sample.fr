@@ -1,0 +1,5 @@
+Bonjour le monde.
+Ceci est un test du système d'alignement.
+Comment allez-vous aujourd'hui?
+Il fait beau.
+Les plongements SONAR sont puissants. 
